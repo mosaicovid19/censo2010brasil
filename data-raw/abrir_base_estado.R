@@ -8,7 +8,7 @@ abrir_base_estado <- function(base, estado, censodir = "~/Downloads/Censo2010/")
     Dom.Renda = file.path(censo_dir, paste0("DomicilioRenda_",estado,".xls")),
     Resp.Alfa = file.path(censo_dir, paste0("Responsavel02_",estado,".xls"))
   )
-  b <- read_excel(arquivos[base], na = "X")
+  b <- readxl::read_excel(arquivos[base], na = "X")
   print(paste(estado, base, arquivos[base]))
   b %>%
     # fix Entorno03

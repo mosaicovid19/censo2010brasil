@@ -1,9 +1,6 @@
 ## code to prepare `censo2010` dataset goes here
 
 library(tidyverse)
-library(readxl)
-library(foreach)
-library(doParallel)
 
 source("data-raw/abrir_base_estado.R")
 
