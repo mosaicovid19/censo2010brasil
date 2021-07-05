@@ -1,6 +1,7 @@
 abrir_base <- function(base, estados = c("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
                                          "MG", "MS", "MT", "PA", "PB", "PE", "PI", "RJ", "RS", "SP1",
                                          "SP2", "TO"), censo_dir, cores = 1) {
+  library(doParallel)
 
   # cores <- detectCores() %/% 2
   # cores <- 2
