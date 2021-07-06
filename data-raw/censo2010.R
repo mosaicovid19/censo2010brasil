@@ -6,7 +6,7 @@ source("data-raw/abrir_base_estado.R", encoding = 'UTF-8')
 source("data-raw/abrir_base.R", encoding = 'UTF-8')
 
 ## localização dos dados brutos
-censo_dir <- file.path("~/Downloads/Censo2010")
+if(!exists("censo_dir")) censo_dir <- file.path("~/Downloads/Censo2010")
 
 # num de cores para usar em paralelo
 # não é recomendado usar muitos cores, devido ao tamanho das bases
