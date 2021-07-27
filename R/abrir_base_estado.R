@@ -1,4 +1,4 @@
-abrir_base_estado <- function(base, estado, censodir = "~/Downloads/Censo2010/") {
+abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/") {
   arquivo <- file.path(censo_dir, paste0(base, "_", estado, ".xls"))
 
   b <- readxl::read_excel(arquivo, na = "X")
