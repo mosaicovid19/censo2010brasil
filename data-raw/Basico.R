@@ -8,3 +8,4 @@ if(!exists("cores")) cores <- 1
 Basico <- abrir_base(base = "Basico", cores = cores)
 
 usethis::use_data(Basico, overwrite = TRUE)
+rm(Basico)

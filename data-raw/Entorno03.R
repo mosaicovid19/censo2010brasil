@@ -8,3 +8,4 @@ if(!exists("cores")) cores <- 1
 Entorno03 <- abrir_base(base = "Entorno03", cores = cores)
 
 usethis::use_data(Entorno03, overwrite = TRUE)
+rm(Entorno03)

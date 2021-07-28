@@ -8,3 +8,4 @@ if(!exists("cores")) cores <- 1
 Pessoa03 <- abrir_base(base = "Pessoa03", cores = cores)
 
 usethis::use_data(Pessoa03, overwrite = TRUE)
+rm(Pessoa03)

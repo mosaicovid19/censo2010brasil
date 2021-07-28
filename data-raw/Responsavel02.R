@@ -8,3 +8,4 @@ if(!exists("cores")) cores <- 1
 Responsavel02 <- abrir_base(base = "Responsavel02", cores = cores)
 
 usethis::use_data(Responsavel02, overwrite = TRUE)
+rm(Responsavel02)
