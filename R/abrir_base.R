@@ -6,11 +6,11 @@ abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010"
                     "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN",
                     "RO","RR", "RS", "SC", "SE", "SP1", "SP2", "TO")
 
-  estados <- match.arg(estados, estados_full, several.ok = TRUE)
-
   if (is.null(estados)) {
     estados <- estados_full
   }
+
+  estados <- match.arg(estados, estados_full, several.ok = TRUE)
 
   # cores <- detectCores() %/% 2
   # cores <- 2
