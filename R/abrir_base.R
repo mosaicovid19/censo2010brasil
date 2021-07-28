@@ -22,7 +22,7 @@
 #' @importFrom dplyr bind_rows
 abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010", cores = 1) {
 
-  require(doParallel) # construto %dopar%
+  # require(doParallel) # construto %dopar%
 
   estados_full <- c("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
                     "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN",
