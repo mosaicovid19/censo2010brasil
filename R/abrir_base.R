@@ -13,7 +13,6 @@
 #'  }
 #' }
 #' @seealso
-#'  \code{\link[doParallel]{c("registerDoParallel", "registerDoParallel")}},\code{\link[doParallel]{registerDoParallel}}
 #'  \code{\link[foreach]{foreach}}
 #' @rdname abrir_base
 #' @export

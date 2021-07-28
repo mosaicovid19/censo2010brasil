@@ -37,6 +37,5 @@ if(interactive()){
 }
 }
 \seealso{
-\code{\link[doParallel]{c("registerDoParallel", "registerDoParallel")}},\code{\link[doParallel]{registerDoParallel}}
- \code{\link[foreach]{foreach}}
+\code{\link[foreach]{foreach}}
 }
