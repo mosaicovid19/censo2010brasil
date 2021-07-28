@@ -1,11 +1,9 @@
-abrir_base <- function(base, estados = c("todos", "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
-                                                    "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO",
-                                                    "RR", "RS", "SC", "SE", "SP1", "SP2", "TO"), censo_dir, cores = 1) {
+abrir_base <- function(base, estados = NULL, censo_dir, cores = 1) {
 
   require(doParallel) # construto %dopar%
 
   estados <- match.arg(estados, several.ok = TRUE)
-  if (estados == "todos") {
+  if (is.null(estados)) {
     estados <- c("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
                  "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO",
                  "RR", "RS", "SC", "SE", "SP1", "SP2", "TO")
