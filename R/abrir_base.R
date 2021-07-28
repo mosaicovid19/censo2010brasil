@@ -18,7 +18,8 @@
 #' @rdname abrir_base
 #' @export
 #' @importFrom doParallel registerDoParallel stopImplicitCluster
-#' @importFrom foreach foreach
+#' @importFrom foreach foreach `%dopar%`
+#' @importFrom dplyr bind_rows
 abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010", cores = 1) {
 
   require(doParallel) # construto %dopar%
@@ -41,7 +42,7 @@ abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010"
 
   b <- foreach::foreach(
     e = estados,
-    .combine = bind_rows,
+    .combine = dplyr::bind_rows,
     .packages = c("readxl"),
     .export = c("abrir_base_estado")
     ) %dopar%
