@@ -1,4 +1,4 @@
-abrir_base <- function(base, estados = NULL, censo_dir, cores = 1) {
+abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010", cores = 1) {
 
   require(doParallel) # construto %dopar%
 
