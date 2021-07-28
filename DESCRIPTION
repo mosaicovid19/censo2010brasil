@@ -1,10 +1,10 @@
 Package: censo2010brasil
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Dados do Censo Demográfico 2010 do Brasil
 Version: 0.1.0.9005
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Author: Felipe Figueiredo <philsf79@gmail.com>
+Maintainer: Felipe Figueiredo <philsf79@gmail.com>
+Description: Bases de agregados por setores censitários (Censo Brasil 2010)
     Use four spaces when indenting paragraphs within the Description.
 License: What license is it under?
 Encoding: UTF-8
