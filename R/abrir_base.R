@@ -40,6 +40,8 @@ abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010"
   # registerDoParallel(cl)
   doParallel::registerDoParallel(cores = cores)
 
+  e <- NULL # iterador
+
   b <- foreach::foreach(
     e = estados,
     .combine = dplyr::bind_rows,
