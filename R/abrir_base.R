@@ -21,6 +21,5 @@ abrir_base <- function(base, estados = c("AC", "AL", "AM", "AP", "BA", "CE", "DF
     # stopCluster(cl)
   doParallel::stopImplicitCluster()
 
-  b <- b %>%
-    arrange(Cod_UF)
+  b
 }
