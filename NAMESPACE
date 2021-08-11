@@ -2,8 +2,6 @@
 
 export(abrir_base)
 export(abrir_base_estado)
-importFrom(doParallel,registerDoParallel)
-importFrom(doParallel,stopImplicitCluster)
 importFrom(dplyr,`%>%`)
 importFrom(dplyr,across)
 importFrom(dplyr,any_of)
