@@ -16,12 +16,9 @@
 #'  \code{\link[foreach]{foreach}}
 #' @rdname abrir_base
 #' @export
-#' @importFrom doParallel registerDoParallel stopImplicitCluster
 #' @importFrom foreach foreach `%dopar%`
 #' @importFrom dplyr bind_rows
 abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010", cores = 1) {
-
-  # require(doParallel) # construto %dopar%
 
   estados_full <- c("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
                     "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN",
@@ -33,11 +30,7 @@ abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010"
 
   estados <- match.arg(estados, estados_full, several.ok = TRUE)
 
-  # cores <- detectCores() %/% 2
-  # cores <- 2
-  # cl <- makePSOCKcluster(detectCores())
-  # registerDoParallel(cl)
-  doParallel::registerDoParallel(cores = cores)
+  # doParallel::registerDoParallel(cores = cores)
 
   e <- NULL # iterador
 
@@ -50,7 +43,7 @@ abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010"
     abrir_base_estado(base, e, censo_dir)
 
     # stopCluster(cl)
-  doParallel::stopImplicitCluster()
+  # doParallel::stopImplicitCluster()
 
   b
 }
