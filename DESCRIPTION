@@ -14,7 +14,6 @@ Depends:
     R (>= 2.10)
 Imports:
     dplyr,
-    doParallel,
     foreach,
     readxl
 RoxygenNote: 7.1.1
