@@ -7,5 +7,9 @@ if(!exists("cores")) cores <- 1
 
 DomicilioRenda <- abrir_base(base = "DomicilioRenda", cores = cores)
 
+# Salvar apenas a estrutura do data.frame
+DomicilioRenda <- DomicilioRenda %>% head(0)
 usethis::use_data(DomicilioRenda, overwrite = TRUE)
-rm(DomicilioRenda)
+
+# template de doc (Rd)
+sinew::makeOxygen(DomicilioRenda, add_fields = "source")

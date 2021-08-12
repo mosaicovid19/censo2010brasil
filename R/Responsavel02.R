@@ -221,5 +221,5 @@
 #'   \item{\code{V215}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V216}}{double COLUMN_DESCRIPTION}
 #'}
-#' @details DETAILS
+#' @source \url{http://somewhere.important.com/}
 "Responsavel02"

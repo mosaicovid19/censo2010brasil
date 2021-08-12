@@ -143,13 +143,13 @@ A data frame with 310120 rows and 134 variables:
   \item{\code{V132}}{double COLUMN_DESCRIPTION}
 }
 }
+\source{
+\url{http://somewhere.important.com/}
+}
 \usage{
 Domicilio02
 }
 \description{
 DATASET_DESCRIPTION
-}
-\details{
-DETAILS
 }
 \keyword{datasets}

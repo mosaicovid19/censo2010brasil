@@ -25,13 +25,13 @@ A data frame with 310120 rows and 16 variables:
   \item{\code{V014}}{double COLUMN_DESCRIPTION}
 }
 }
+\source{
+\url{http://somewhere.important.com/}
+}
 \usage{
 DomicilioRenda
 }
 \description{
 DATASET_DESCRIPTION
-}
-\details{
-DETAILS
 }
 \keyword{datasets}

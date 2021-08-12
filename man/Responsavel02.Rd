@@ -227,13 +227,13 @@ A data frame with 310114 rows and 218 variables:
   \item{\code{V216}}{double COLUMN_DESCRIPTION}
 }
 }
+\source{
+\url{http://somewhere.important.com/}
+}
 \usage{
 Responsavel02
 }
 \description{
 DATASET_DESCRIPTION
-}
-\details{
-DETAILS
 }
 \keyword{datasets}

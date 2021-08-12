@@ -42,13 +42,13 @@ A data frame with 310120 rows and 33 variables:
   \item{\code{V012}}{double COLUMN_DESCRIPTION}
 }
 }
+\source{
+\url{http://somewhere.important.com/}
+}
 \usage{
 Basico
 }
 \description{
 DATASET_DESCRIPTION
-}
-\details{
-DETAILS
 }
 \keyword{datasets}
