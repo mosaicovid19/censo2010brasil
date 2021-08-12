@@ -15,8 +15,8 @@
 #'  \code{\link[readxl]{read_excel}}
 #' @rdname abrir_base_estado
 #' @export
-#' @importFrom readxl read_excel
-#' @importFrom dplyr `%>%` mutate across any_of starts_with
+#' @import readxl
+#' @import dplyr
 abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/") {
   arquivo <- file.path(censo_dir, paste0(base, "_", estado, ".xls"))
 

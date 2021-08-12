@@ -16,8 +16,8 @@
 #'  \code{\link[foreach]{foreach}}
 #' @rdname abrir_base
 #' @export
-#' @importFrom foreach foreach `%do%` `%dopar%`
-#' @importFrom dplyr bind_rows
+#' @import foreach
+#' @import dplyr
 abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010", cores = 1) {
 
   estados_full <- c("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA",
