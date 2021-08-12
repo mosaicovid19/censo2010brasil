@@ -1,3 +1,22 @@
+#' @title FUNCTION_TITLE
+#' @description FUNCTION_DESCRIPTION
+#' @param base PARAM_DESCRIPTION
+#' @param estado PARAM_DESCRIPTION
+#' @param censo_dir PARAM_DESCRIPTION, Default: '~/Downloads/Censo2010/'
+#' @return OUTPUT_DESCRIPTION
+#' @details DETAILS
+#' @examples
+#' \dontrun{
+#' if(interactive()){
+#'  #EXAMPLE1
+#'  }
+#' }
+#' @seealso
+#'  \code{\link[readxl]{read_excel}}
+#' @rdname abrir_base_estado
+#' @export
+#' @import readxl
+#' @import dplyr
 abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/") {
   arquivo <- file.path(censo_dir, paste0(base, "_", estado, ".xls"))
 

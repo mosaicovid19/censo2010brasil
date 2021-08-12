@@ -7,5 +7,9 @@ if(!exists("cores")) cores <- 1
 
 Entorno03 <- abrir_base(base = "Entorno03", cores = cores)
 
+# Salvar apenas a estrutura do data.frame
+Entorno03 <- Entorno03 %>% head(0)
 usethis::use_data(Entorno03, overwrite = TRUE)
-rm(Entorno03)
+
+# template de doc (Rd)
+sinew::makeOxygen(Entorno03, add_fields = "source")
