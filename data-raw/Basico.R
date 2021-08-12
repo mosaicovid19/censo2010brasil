@@ -10,3 +10,6 @@ Basico <- abrir_base(base = "Basico", cores = cores)
 # Salvar apenas a estrutura do data.frame
 Basico <- Basico %>% head(0)
 usethis::use_data(Basico, overwrite = TRUE)
+
+# template de doc (Rd)
+sinew::makeOxygen(Basico, add_fields = "source")

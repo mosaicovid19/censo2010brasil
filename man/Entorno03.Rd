@@ -231,13 +231,13 @@ A data frame with 310120 rows and 222 variables:
   \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
 }
 }
+\source{
+\url{http://somewhere.important.com/}
+}
 \usage{
 Entorno03
 }
 \description{
 DATASET_DESCRIPTION
-}
-\details{
-DETAILS
 }
 \keyword{datasets}

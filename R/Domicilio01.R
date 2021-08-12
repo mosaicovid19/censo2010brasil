@@ -246,5 +246,5 @@
 #'   \item{\code{V240}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V241}}{double COLUMN_DESCRIPTION}
 #'}
-#' @details DETAILS
+#' @source \url{http://somewhere.important.com/}
 "Domicilio01"

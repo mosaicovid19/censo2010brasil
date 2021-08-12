@@ -137,5 +137,5 @@
 #'   \item{\code{V131}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V132}}{double COLUMN_DESCRIPTION}
 #'}
-#' @details DETAILS
+#' @source \url{http://somewhere.important.com/}
 "Domicilio02"

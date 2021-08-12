@@ -262,13 +262,13 @@ A data frame with 310120 rows and 253 variables:
   \item{\code{V251}}{double COLUMN_DESCRIPTION}
 }
 }
+\source{
+\url{http://somewhere.important.com/}
+}
 \usage{
 Pessoa03
 }
 \description{
 DATASET_DESCRIPTION
-}
-\details{
-DETAILS
 }
 \keyword{datasets}

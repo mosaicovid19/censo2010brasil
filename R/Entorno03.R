@@ -225,5 +225,5 @@
 #'   \item{\code{Cod_bairro}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
 #'}
-#' @details DETAILS
+#' @source \url{http://somewhere.important.com/}
 "Entorno03"
