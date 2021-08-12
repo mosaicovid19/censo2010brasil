@@ -16,7 +16,7 @@
 #'  \code{\link[foreach]{foreach}}
 #' @rdname abrir_base
 #' @export
-#' @importFrom foreach foreach `%dopar%`
+#' @importFrom foreach foreach `%do%` `%dopar%`
 #' @importFrom dplyr bind_rows
 abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010", cores = 1) {
 
@@ -39,7 +39,7 @@ abrir_base <- function(base, estados = NULL, censo_dir = "~/Downloads/Censo2010"
     .combine = dplyr::bind_rows,
     .packages = c("readxl"),
     .export = c("abrir_base_estado")
-    ) %dopar%
+    ) %do% # %dopar% # processamento paralelo com dopar
     abrir_base_estado(base, e, censo_dir)
 
     # stopCluster(cl)
