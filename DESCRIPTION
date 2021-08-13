@@ -1,7 +1,7 @@
 Package: censo2010brasil
 Type: Package
 Title: Dados do Censo Demográfico 2010 do Brasil
-Version: 0.1.0.9002
+Version: 0.1.0.9003
 Author: Felipe Figueiredo <philsf79@gmail.com>
 Maintainer: Felipe Figueiredo <philsf79@gmail.com>
 Description: Bases de agregados por setores censitários (Censo Brasil 2010)
