@@ -7,6 +7,9 @@ if(!exists("cores")) cores <- 1
 
 Pessoa05 <- abrir_base(base = "Pessoa05", cores = cores)
 
+# Injetar data.frame em tabela do DB
+dbWriteTable(con, "Pessoa05", Pessoa05)
+
 # Salvar apenas a estrutura do data.frame
 Pessoa05 <- Pessoa05 %>% head(0)
 usethis::use_data(Pessoa05, overwrite = TRUE)

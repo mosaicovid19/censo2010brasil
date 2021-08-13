@@ -7,6 +7,9 @@ if(!exists("cores")) cores <- 1
 
 DomicilioRenda <- abrir_base(base = "DomicilioRenda", cores = cores)
 
+# Injetar data.frame em tabela do DB
+dbWriteTable(con, "DomicilioRenda", DomicilioRenda)
+
 # Salvar apenas a estrutura do data.frame
 DomicilioRenda <- DomicilioRenda %>% head(0)
 usethis::use_data(DomicilioRenda, overwrite = TRUE)

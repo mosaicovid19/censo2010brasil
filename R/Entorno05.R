@@ -243,21 +243,21 @@
 #'   \item{\code{Nome_do_subdistrito}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Cod_bairro}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{.242}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.243}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.244}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.245}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.246}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.247}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.248}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.249}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.250}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.251}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.252}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.253}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.254}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.255}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{.256}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...242}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...243}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...244}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...245}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...246}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...247}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...248}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...249}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...250}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...251}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...252}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...253}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...254}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...255}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{...256}}{double COLUMN_DESCRIPTION}
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Entorno05"

@@ -7,6 +7,9 @@ if(!exists("cores")) cores <- 1
 
 Entorno03 <- abrir_base(base = "Entorno03", cores = cores)
 
+# Injetar data.frame em tabela do DB
+dbWriteTable(con, "Entorno03", Entorno03)
+
 # Salvar apenas a estrutura do data.frame
 Entorno03 <- Entorno03 %>% head(0)
 usethis::use_data(Entorno03, overwrite = TRUE)
