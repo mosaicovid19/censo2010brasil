@@ -64,13 +64,13 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
+    "character")
   expect_type(
     Basico %>%
       select(Situacao_setor) %>%
       head() %>%
       pull(),
-    "double")
+    "integer")
 })
 
 test_that("unknown vars", {

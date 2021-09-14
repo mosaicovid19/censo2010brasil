@@ -18,7 +18,7 @@ test_that("class", {
 test_that("dimensions", {
   expect_identical(
     dim(ResponsavelRenda),
-    c(NA, 134L)
+    c(NA, 133L)
   )
 })
 
@@ -36,7 +36,7 @@ test_that("names", {
     ResponsavelRenda %>%
       colnames() %>%
       length(),
-    134
+    133
   )
   expect_equal(
     ResponsavelRenda %>%
@@ -65,19 +65,13 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
-  expect_type(
-    ResponsavelRenda %>%
-      select(Situacao_setor) %>%
-      head() %>%
-      pull(),
-    "double")
+    "character")
 })
 
 test_that("unknown vars", {
   expect_equal(
     ResponsavelRenda %>%
-      select(-starts_with("V"), -Cod_setor, -Situacao_setor) %>%
+      select(-starts_with("V"), -Cod_setor) %>%
       colnames() %>% length(),
     0
   )

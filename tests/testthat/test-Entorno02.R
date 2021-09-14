@@ -18,7 +18,7 @@ test_that("class", {
 test_that("dimensions", {
   expect_identical(
     dim(Entorno02),
-    c(NA, 241L)
+    c(NA, 221L)
   )
 })
 
@@ -36,19 +36,19 @@ test_that("names", {
     Entorno02 %>%
       colnames() %>%
       length(),
-    241
+    221
   )
   expect_equal(
     Entorno02 %>%
       select(starts_with("Cod_")) %>%
       colnames() %>% length(),
-    10
+    1
   )
   expect_equal(
     Entorno02 %>%
       select(starts_with("Nome_")) %>%
       colnames() %>% length(),
-    9
+    0
   )
   expect_equal(
     Entorno02 %>%
@@ -64,21 +64,15 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
-  expect_type(
-    Entorno02 %>%
-      select(Situacao_setor) %>%
-      head() %>%
-      pull(),
-    "double")
+    "character")
 })
 
 test_that("unknown vars", {
   expect_equal(
     Entorno02 %>%
-      select(-starts_with("V"), -Cod_setor, -Situacao_setor) %>%
+      select(-starts_with("V"), -Cod_setor) %>%
       colnames() %>% length(),
-    19 # Setor_Precoleta + junk
+    0
   )
 })
 
