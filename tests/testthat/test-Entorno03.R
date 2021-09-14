@@ -1,3 +1,87 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+library(DBI)
+censodb <- dbConnect(
+  odbc::odbc(),
+  driver = "SQLite3",
+  database = file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite")
+)
+
+Entorno03 <- tbl(censodb, "Entorno03")
+
+test_that("connection (writable)", {
+  expect_true(dbIsValid(censodb))
+  expect_false(dbIsReadOnly(censodb))
 })
+
+test_that("class", {
+  expect_s3_class(Entorno03, "tbl_SQLite")
+  expect_s3_class(Entorno03, "tbl_dbi")
+  expect_s3_class(Entorno03, "tbl_sql")
+  expect_s3_class(Entorno03, "tbl_lazy")
+  expect_s3_class(Entorno03, "tbl")
+})
+
+test_that("dimensions", {
+  expect_identical(
+    dim(Entorno03),
+    c(NA, 222L)
+  )
+})
+
+test_that("nrow", {
+  expect_identical(
+    Entorno03 %>%
+      count() %>%
+      pull(),
+    310120L
+  )
+})
+
+test_that("names", {
+  expect_equal(
+    Entorno03 %>%
+      colnames() %>%
+      length(),
+    222
+  )
+  expect_equal(
+    Entorno03 %>%
+      select(starts_with("Cod_")) %>%
+      colnames() %>% length(),
+    10
+  )
+  expect_equal(
+    Entorno03 %>%
+      select(starts_with("Nome_")) %>%
+      colnames() %>% length(),
+    9
+  )
+  expect_equal(
+    Entorno03 %>%
+      select(starts_with("V")) %>%
+      colnames() %>% length(),
+    201
+  )
+  expect_equal(
+    Entorno03 %>%
+      select(-starts_with(c("Cod_", "Situacao_Setor", "Nome_", "V"))) %>%
+      colnames() %>% length(),
+    1 # Tipo_Setor
+  )
+})
+
+test_that("keys types", {
+  expect_type(
+    Entorno03 %>%
+      select(Cod_setor) %>%
+      head() %>%
+      pull(),
+    "double")
+  expect_type(
+    Entorno03 %>%
+      select(Situacao_setor) %>%
+      head() %>%
+      pull(),
+    "double")
+})
+
+dbDisconnect(censodb)
