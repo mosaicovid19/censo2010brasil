@@ -31,17 +31,7 @@ abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/"
     # Todos os códigos como int
     mutate(
       # Cod_setor excede o limite de int, precisamos int64
-      Cod_setor = as.integer64(Cod_setor),
-      `Cod_Grandes Regiões` = as.integer(`Cod_Grandes Regiões`),
-      Cod_UF = as.integer(Cod_UF),
-      Cod_meso = as.integer(Cod_meso),
-      Cod_micro = as.integer(Cod_micro),
-      Cod_RM = as.integer(Cod_RM),
-      Cod_municipio = as.integer(Cod_municipio),
-      Cod_distrito = as.integer(Cod_distrito),
-      # Cod_subdistrito excede o limite de int, precisamos int64
-      Cod_subdistrito = as.integer64(Cod_subdistrito),
-      Cod_bairro = as.integer(Cod_micro),
+      Cod_setor = bit64::as.integer64(Cod_setor),
       Situacao_setor = as.integer(Situacao_setor),
     ) %>%
     # fix Responsavel02_SP2
