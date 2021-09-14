@@ -65,7 +65,7 @@ test_that("names", {
     Entorno04 %>%
       select(-starts_with(c("Cod_", "Situacao_Setor", "Nome_", "V"))) %>%
       colnames() %>% length(),
-    1 # Tipo_Setor
+    1 # Setor_Precoleta
   )
 })
 

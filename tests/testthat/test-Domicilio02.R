@@ -62,10 +62,10 @@ test_that("names", {
     132
   )
   expect_equal(
-    Basico %>%
+    Domicilio02 %>%
       select(-starts_with(c("Cod_", "Situacao_Setor", "Nome_", "V"))) %>%
       colnames() %>% length(),
-    1 # Tipo_Setor
+    0
   )
 })
 
