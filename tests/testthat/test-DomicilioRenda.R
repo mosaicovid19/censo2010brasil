@@ -1,3 +1,87 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+library(DBI)
+censodb <- dbConnect(
+  odbc::odbc(),
+  driver = "SQLite3",
+  database = file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite")
+)
+
+test_that("connection (writable)", {
+  expect_true(dbIsValid(censodb))
+  expect_false(dbIsReadOnly(censodb))
 })
+
+DomicilioRenda <- tbl(censodb, "DomicilioRenda")
+
+test_that("class", {
+  expect_s3_class(DomicilioRenda, "tbl_SQLite")
+  expect_s3_class(DomicilioRenda, "tbl_dbi")
+  expect_s3_class(DomicilioRenda, "tbl_sql")
+  expect_s3_class(DomicilioRenda, "tbl_lazy")
+  expect_s3_class(DomicilioRenda, "tbl")
+})
+
+test_that("dimensions", {
+  expect_identical(
+    dim(DomicilioRenda),
+    c(NA, 33L)
+  )
+})
+
+test_that("nrow", {
+  expect_identical(
+    DomicilioRenda %>%
+      count() %>%
+      pull(),
+    310120L
+  )
+})
+
+test_that("names", {
+  expect_equal(
+    DomicilioRenda %>%
+      colnames() %>%
+      length(),
+    33
+  )
+  expect_equal(
+    DomicilioRenda %>%
+      select(starts_with("Cod_")) %>%
+      colnames() %>% length(),
+    10
+  )
+  expect_equal(
+    DomicilioRenda %>%
+      select(starts_with("Nome_")) %>%
+      colnames() %>% length(),
+    9
+  )
+  expect_equal(
+    DomicilioRenda %>%
+      select(starts_with("V")) %>%
+      colnames() %>% length(),
+    12
+  )
+  expect_equal(
+    DomicilioRenda %>%
+      select(-starts_with(c("Cod_", "Nome_", "V"))) %>%
+      colnames() %>% length(),
+    2
+  )
+})
+
+test_that("keys types", {
+  expect_type(
+    DomicilioRenda %>%
+      select(Cod_setor) %>%
+      head() %>%
+      pull(),
+    "double")
+  expect_type(
+    DomicilioRenda %>%
+      select(Situacao_setor) %>%
+      head() %>%
+      pull(),
+    "double")
+})
+
+dbDisconnect(censodb)
