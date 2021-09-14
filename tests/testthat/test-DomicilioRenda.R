@@ -5,12 +5,12 @@ censodb <- dbConnect(
   database = file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite")
 )
 
+DomicilioRenda <- tbl(censodb, "DomicilioRenda")
+
 test_that("connection (writable)", {
   expect_true(dbIsValid(censodb))
   expect_false(dbIsReadOnly(censodb))
 })
-
-DomicilioRenda <- tbl(censodb, "DomicilioRenda")
 
 test_that("class", {
   expect_s3_class(DomicilioRenda, "tbl_SQLite")
