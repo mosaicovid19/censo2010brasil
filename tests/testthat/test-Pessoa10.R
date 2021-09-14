@@ -7,11 +7,6 @@ censodb <- dbConnect(
 
 Pessoa10 <- tbl(censodb, "Pessoa10")
 
-test_that("connection (writable)", {
-  expect_true(dbIsValid(censodb))
-  expect_false(dbIsReadOnly(censodb))
-})
-
 test_that("class", {
   expect_s3_class(Pessoa10, "tbl_SQLite")
   expect_s3_class(Pessoa10, "tbl_dbi")
