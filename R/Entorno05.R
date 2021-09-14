@@ -259,5 +259,5 @@
 #'   \item{\code{...255}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{...256}}{double COLUMN_DESCRIPTION}
 #'}
-#' @source \url{http://somewhere.important.com/}
+#' @source \url{ftp://ftp.ibge.gov.br/Censos/Censo_Demografico_2010/Resultados_do_Universo/Agregados_por_Setores_Censitarios/}
 "Entorno05"
