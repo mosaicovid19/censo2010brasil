@@ -37,29 +37,34 @@ test_that("nrow", {
 })
 
 test_that("names", {
-  expect_equal(length(names(Basico)), 33)
+  expect_equal(
+    Basico %>%
+      colnames() %>%
+      length(),
+    33
+  )
   expect_equal(
     Basico %>%
       select(starts_with("Cod_")) %>%
-      names() %>% length(),
+      colnames() %>% length(),
     10
   )
   expect_equal(
     Basico %>%
       select(starts_with("Nome_")) %>%
-      names() %>% length(),
+      colnames() %>% length(),
     9
   )
   expect_equal(
     Basico %>%
       select(starts_with("V")) %>%
-      names() %>% length(),
+      colnames() %>% length(),
     12
   )
   expect_equal(
     Basico %>%
       select(-starts_with(c("Cod_", "Nome_", "V"))) %>%
-      names() %>% length(),
+      colnames() %>% length(),
     2
   )
 })
