@@ -42,19 +42,19 @@ test_that("names", {
     Domicilio01 %>%
       select(starts_with("Cod_")) %>%
       names() %>% length(),
-    10
+    2
   )
   expect_equal(
     Domicilio01 %>%
       select(starts_with("Nome_")) %>%
       names() %>% length(),
-    9
+    2
   )
   expect_equal(
     Domicilio01 %>%
       select(starts_with("V")) %>%
       names() %>% length(),
-    12
+    2
   )
   expect_equal(
     Domicilio01 %>%
