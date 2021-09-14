@@ -65,8 +65,18 @@ test_that("names", {
 })
 
 test_that("keys types", {
-  expect_type(Basico$Cod_setor, "double")
-  expect_type(Basico$Situacao_setor, "double")
+  expect_type(
+    Basico %>%
+      select(Cod_setor) %>%
+      head() %>%
+      pull(),
+    "double")
+  expect_type(
+    Basico %>%
+      select(Situacao_setor) %>%
+      head() %>%
+      pull(),
+    "double")
 })
 
 dbDisconnect(censodb)
