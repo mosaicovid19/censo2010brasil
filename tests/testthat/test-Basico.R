@@ -46,6 +46,12 @@ test_that("names", {
   )
   expect_equal(
     Basico %>%
+      select(matches("Situacao_setor")) %>%
+      colnames() %>% length(),
+    1
+  )
+  expect_equal(
+    Basico %>%
       select(starts_with("Nome_")) %>%
       colnames() %>% length(),
     9

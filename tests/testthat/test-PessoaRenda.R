@@ -46,6 +46,12 @@ test_that("names", {
   )
   expect_equal(
     PessoaRenda %>%
+      select(matches("Situacao_setor")) %>%
+      colnames() %>% length(),
+    0
+  )
+  expect_equal(
+    PessoaRenda %>%
       select(starts_with("Nome_")) %>%
       colnames() %>% length(),
     0
