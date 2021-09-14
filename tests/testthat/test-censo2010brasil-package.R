@@ -8,15 +8,16 @@ test_that("db file integrity", {
   expect_equal(tools::md5sum(dbfile), "a34c89945037285bd463b6242233d017", ignore_attr = TRUE)
 })
 
-censodb <- dbConnect(
-  odbc::odbc(),
-  driver = "SQLite3",
-  database = dbfile
-)
-
 test_that("connection (writable)", {
+  censodb <- dbConnect(
+    odbc::odbc(),
+    driver = "SQLite3",
+    database = dbfile
+  )
+
   expect_true(dbIsValid(censodb))
   expect_false(dbIsReadOnly(censodb))
+
+  dbDisconnect(censodb)
 })
 
-dbDisconnect(censodb)
