@@ -5,7 +5,7 @@ if(!exists("censo_dir")) censo_dir <- file.path(paste0(Sys.getenv("HOME"), "/Dow
 
 if(!exists("cores")) cores <- 1
 
-DomicilioRenda <- abrir_base(base = "DomicilioRenda", cores = cores)
+DomicilioRenda <- abrir_base(base = "DomicilioRenda", censo_dir = censo_dir, cores = cores)
 
 # Injetar data.frame em tabela do DB
 dbWriteTable(con, "DomicilioRenda", DomicilioRenda)
