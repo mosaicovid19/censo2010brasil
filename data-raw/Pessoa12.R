@@ -5,7 +5,8 @@ if(!exists("censo_dir")) censo_dir <- file.path(paste0(Sys.getenv("HOME"), "/Dow
 
 if(!exists("cores")) cores <- 1
 
-Pessoa12 <- abrir_base(base = "Pessoa12", censo_dir = censo_dir, cores = cores)
+Pessoa12 <- abrir_base(base = "Pessoa12", censo_dir = censo_dir, cores = cores) %>%
+  select(Cod_setor, starts_with("V"))
 
 # Injetar data.frame em tabela do DB
 dbWriteTable(con, "Pessoa12", Pessoa12)

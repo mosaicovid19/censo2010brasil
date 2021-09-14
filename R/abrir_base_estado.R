@@ -32,7 +32,6 @@ abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/"
     mutate(
       # Cod_setor excede o limite de int, precisamos int64
       Cod_setor = bit64::as.integer64(Cod_setor),
-      Situacao_setor = as.integer(Situacao_setor),
     ) %>%
     # fix Responsavel02_SP2
     mutate(across(starts_with("V"), as.numeric))

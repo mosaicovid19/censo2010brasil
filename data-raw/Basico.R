@@ -8,7 +8,7 @@ if(!exists("cores")) cores <- 1
 Basico <- abrir_base(base = "Basico", censo_dir = censo_dir, cores = cores) %>%
   mutate(
     # Cod_setor é tratado em abrir_base_estado()
-    # Situacao_setor é tratado em abrir_base_estado()
+    Situacao_setor = as.integer(Situacao_setor),
     `Cod_Grandes Regiões` = as.integer(`Cod_Grandes Regiões`),
     Cod_UF = as.integer(Cod_UF),
     Cod_meso = as.integer(Cod_meso),
