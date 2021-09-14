@@ -37,36 +37,51 @@ test_that("nrow", {
 })
 
 test_that("names", {
-  expect_equal(length(names(Domicilio01)), 33)
+  expect_equal(
+    Domicilio01 %>%
+      colnames() %>%
+      length(),
+    33
+  )
   expect_equal(
     Domicilio01 %>%
       select(starts_with("Cod_")) %>%
-      names() %>% length(),
-    2
+      colnames() %>% length(),
+    10
   )
   expect_equal(
     Domicilio01 %>%
       select(starts_with("Nome_")) %>%
-      names() %>% length(),
-    2
+      colnames() %>% length(),
+    9
   )
   expect_equal(
     Domicilio01 %>%
       select(starts_with("V")) %>%
-      names() %>% length(),
-    2
+      colnames() %>% length(),
+    12
   )
   expect_equal(
     Domicilio01 %>%
       select(-starts_with(c("Cod_", "Nome_", "V"))) %>%
-      names() %>% length(),
+      colnames() %>% length(),
     2
   )
 })
 
 test_that("keys types", {
-  expect_type(Domicilio01$Cod_setor, "double")
-  expect_type(Domicilio01$Situacao_setor, "double")
+  expect_type(
+    Domicilio01 %>%
+      select(Cod_setor) %>%
+      head() %>%
+      pull(),
+    "double")
+  expect_type(
+    Domicilio01 %>%
+      select(Situacao_setor) %>%
+      head() %>%
+      pull(),
+    "double")
 })
 
 dbDisconnect(censodb)
