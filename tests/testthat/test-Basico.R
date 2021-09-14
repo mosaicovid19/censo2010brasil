@@ -5,6 +5,11 @@ censodb <- dbConnect(
   database = file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite")
 )
 
+test_that("connection (writable)", {
+  expect_true(dbIsValid(censodb))
+  expect_false(dbIsReadOnly(censodb))
+})
+
 Basico <- tbl(censodb, "Basico")
 
 test_that("class", {
