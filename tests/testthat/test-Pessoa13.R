@@ -61,12 +61,6 @@ test_that("names", {
       colnames() %>% length(),
     134
   )
-  expect_equal(
-    Pessoa13 %>%
-      select(-starts_with(c("Cod_", "Situacao_Setor", "Nome_", "V"))) %>%
-      colnames() %>% length(),
-    0
-  )
 })
 
 test_that("keys types", {
@@ -84,5 +78,13 @@ test_that("keys types", {
     "double")
 })
 
-dbDisconnect(censodb)
+test_that("unknown vars", {
+  expect_equal(
+    Pessoa13 %>%
+      select(-starts_with("V"), -Cod_setor, -Situacao_setor) %>%
+      colnames() %>% length(),
+    0
+  )
+})
 
+dbDisconnect(censodb)
