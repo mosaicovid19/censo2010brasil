@@ -17,7 +17,6 @@
 #' @export
 #' @import readxl
 #' @import dplyr
-#' @import bit64
 abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/") {
   arquivo <- file.path(censo_dir, paste0(base, "_", estado, ".xls"))
 
@@ -28,11 +27,8 @@ abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/"
     # Assume que Cod_meso sempre existe na base em que Cod_UF existe e
     # toma os 2 primeiros dígitos de um número de 4 dígitos
     mutate( across(any_of("Cod_UF"), ~ Cod_meso %/% 100) ) %>%
-    # Todos os códigos como int
-    mutate(
-      # Cod_setor excede o limite de int, precisamos int64
-      Cod_setor = bit64::as.integer64(Cod_setor),
-    ) %>%
+    # Todos os códigos como char
+    mutate( across(starts_with("Cod_"), ~ as.character) ) %>%
     # fix Responsavel02_SP2
     mutate(across(starts_with("V"), as.numeric))
 }
