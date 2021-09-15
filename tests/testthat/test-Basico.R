@@ -34,32 +34,31 @@ test_that("nrow", {
 test_that("names", {
   expect_equal(
     Basico %>%
-      colnames() %>%
-      length(),
+      ncol(),
     33
   )
   expect_equal(
     Basico %>%
       select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
+      ncol(),
     10
   )
   expect_equal(
     Basico %>%
       select(matches("Situacao_setor")) %>%
-      colnames() %>% length(),
+      ncol(),
     1
   )
   expect_equal(
     Basico %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
+      ncol(),
     9
   )
   expect_equal(
     Basico %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     12
   )
 })
@@ -83,7 +82,7 @@ test_that("unknown vars", {
   expect_equal(
     Basico %>%
       select(-starts_with(c("Cod_", "Nome_", "V")), -Situacao_setor, -Tipo_setor) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
 })

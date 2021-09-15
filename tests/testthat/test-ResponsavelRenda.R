@@ -34,32 +34,31 @@ test_that("nrow", {
 test_that("names", {
   expect_equal(
     ResponsavelRenda %>%
-      colnames() %>%
-      length(),
+      ncol(),
     133
   )
   expect_equal(
     ResponsavelRenda %>%
       select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
+      ncol(),
     1
   )
   expect_equal(
     ResponsavelRenda %>%
       select(matches("Situacao_setor")) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
   expect_equal(
     ResponsavelRenda %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
   expect_equal(
     ResponsavelRenda %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     132
   )
 
@@ -78,7 +77,7 @@ test_that("unknown vars", {
   expect_equal(
     ResponsavelRenda %>%
       select(-starts_with("V"), -Cod_setor) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
 })

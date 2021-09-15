@@ -34,32 +34,31 @@ test_that("nrow", {
 test_that("names", {
   expect_equal(
     Pessoa01 %>%
-      colnames() %>%
-      length(),
+      ncol(),
     86
   )
   expect_equal(
     Pessoa01 %>%
       select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
+      ncol(),
     1
   )
   expect_equal(
     Pessoa01 %>%
       select(matches("Situacao_setor")) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
   expect_equal(
     Pessoa01 %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
   expect_equal(
     Pessoa01 %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     85
   )
 })
@@ -77,7 +76,7 @@ test_that("unknown vars", {
   expect_equal(
     Pessoa01 %>%
       select(-starts_with("V"), -Cod_setor) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
 })

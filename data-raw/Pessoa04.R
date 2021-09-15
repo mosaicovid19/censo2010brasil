@@ -9,7 +9,7 @@ Pessoa04 <- abrir_base(base = "Pessoa04", censo_dir = censo_dir, cores = cores) 
   select(Cod_setor, starts_with("V"))
 
 # Injetar data.frame em tabela do DB
-dbWriteTable(con, "Pessoa04", Pessoa04)
+dbWriteTable(censodb, "Pessoa04", Pessoa04)
 
 # Salvar apenas a estrutura do data.frame
 Pessoa04 <- Pessoa04 %>% head(0)

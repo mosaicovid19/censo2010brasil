@@ -22,7 +22,7 @@ Basico <- abrir_base(base = "Basico", censo_dir = censo_dir, cores = cores) %>%
   )
 
 # Injetar data.frame em tabela do DB
-dbWriteTable(con, "Basico", Basico)
+dbWriteTable(censodb, "Basico", Basico)
 
 # Salvar apenas a estrutura do data.frame
 Basico <- Basico %>% head(0)
