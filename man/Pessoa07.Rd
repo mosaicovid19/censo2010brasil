@@ -5,10 +5,9 @@
 \alias{Pessoa07}
 \title{DATASET_TITLE}
 \format{
-A data frame with 0 rows and 256 variables:
+A data frame with 310077 rows and 205 variables:
 \describe{
   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
-  \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
   \item{\code{V001}}{double COLUMN_DESCRIPTION}
   \item{\code{V002}}{double COLUMN_DESCRIPTION}
   \item{\code{V003}}{double COLUMN_DESCRIPTION}
@@ -213,56 +212,6 @@ A data frame with 0 rows and 256 variables:
   \item{\code{V202}}{double COLUMN_DESCRIPTION}
   \item{\code{V203}}{double COLUMN_DESCRIPTION}
   \item{\code{V204}}{double COLUMN_DESCRIPTION}
-  \item{\code{...207}}{double COLUMN_DESCRIPTION}
-  \item{\code{...208}}{double COLUMN_DESCRIPTION}
-  \item{\code{...209}}{double COLUMN_DESCRIPTION}
-  \item{\code{...210}}{double COLUMN_DESCRIPTION}
-  \item{\code{...211}}{double COLUMN_DESCRIPTION}
-  \item{\code{...212}}{double COLUMN_DESCRIPTION}
-  \item{\code{...213}}{double COLUMN_DESCRIPTION}
-  \item{\code{...214}}{double COLUMN_DESCRIPTION}
-  \item{\code{...215}}{double COLUMN_DESCRIPTION}
-  \item{\code{...216}}{double COLUMN_DESCRIPTION}
-  \item{\code{...217}}{double COLUMN_DESCRIPTION}
-  \item{\code{...218}}{double COLUMN_DESCRIPTION}
-  \item{\code{...219}}{double COLUMN_DESCRIPTION}
-  \item{\code{...220}}{double COLUMN_DESCRIPTION}
-  \item{\code{...221}}{double COLUMN_DESCRIPTION}
-  \item{\code{...222}}{double COLUMN_DESCRIPTION}
-  \item{\code{...223}}{double COLUMN_DESCRIPTION}
-  \item{\code{...224}}{double COLUMN_DESCRIPTION}
-  \item{\code{...225}}{double COLUMN_DESCRIPTION}
-  \item{\code{...226}}{double COLUMN_DESCRIPTION}
-  \item{\code{...227}}{double COLUMN_DESCRIPTION}
-  \item{\code{...228}}{double COLUMN_DESCRIPTION}
-  \item{\code{...229}}{double COLUMN_DESCRIPTION}
-  \item{\code{...230}}{double COLUMN_DESCRIPTION}
-  \item{\code{...231}}{double COLUMN_DESCRIPTION}
-  \item{\code{...232}}{double COLUMN_DESCRIPTION}
-  \item{\code{...233}}{double COLUMN_DESCRIPTION}
-  \item{\code{...234}}{double COLUMN_DESCRIPTION}
-  \item{\code{...235}}{double COLUMN_DESCRIPTION}
-  \item{\code{...236}}{double COLUMN_DESCRIPTION}
-  \item{\code{...237}}{double COLUMN_DESCRIPTION}
-  \item{\code{...238}}{double COLUMN_DESCRIPTION}
-  \item{\code{...239}}{double COLUMN_DESCRIPTION}
-  \item{\code{...240}}{double COLUMN_DESCRIPTION}
-  \item{\code{...241}}{double COLUMN_DESCRIPTION}
-  \item{\code{...242}}{double COLUMN_DESCRIPTION}
-  \item{\code{...243}}{double COLUMN_DESCRIPTION}
-  \item{\code{...244}}{double COLUMN_DESCRIPTION}
-  \item{\code{...245}}{double COLUMN_DESCRIPTION}
-  \item{\code{...246}}{double COLUMN_DESCRIPTION}
-  \item{\code{...247}}{double COLUMN_DESCRIPTION}
-  \item{\code{...248}}{double COLUMN_DESCRIPTION}
-  \item{\code{...249}}{double COLUMN_DESCRIPTION}
-  \item{\code{...250}}{double COLUMN_DESCRIPTION}
-  \item{\code{...251}}{double COLUMN_DESCRIPTION}
-  \item{\code{...252}}{double COLUMN_DESCRIPTION}
-  \item{\code{...253}}{double COLUMN_DESCRIPTION}
-  \item{\code{...254}}{double COLUMN_DESCRIPTION}
-  \item{\code{...255}}{double COLUMN_DESCRIPTION}
-  \item{\code{...256}}{double COLUMN_DESCRIPTION}
 }
 }
 \source{

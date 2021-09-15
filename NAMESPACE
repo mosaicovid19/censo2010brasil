@@ -2,6 +2,7 @@
 
 export(abrir_base)
 export(abrir_base_estado)
+import(bit64)
 import(dplyr)
 import(foreach)
 import(readxl)
