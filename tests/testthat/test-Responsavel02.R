@@ -15,28 +15,24 @@ test_that("class", {
   expect_s3_class(Responsavel02, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(Responsavel02),
-    c(NA, 217L)
-  )
-})
-
-test_that("nrow", {
-  expect_identical(
-    Responsavel02 %>%
-      count() %>%
-      pull(),
-    310114L # menos setores
-  )
-})
-
-test_that("names", {
+test_that("ncol", {
   expect_equal(
     Responsavel02 %>%
       ncol(),
     217
   )
+})
+
+test_that("nrow", {
+  expect_equal(
+    Responsavel02 %>%
+      count() %>%
+      pull(),
+    310114 # menos setores
+  )
+})
+
+test_that("names", {
   expect_equal(
     Responsavel02 %>%
       select(starts_with("Cod_")) %>%

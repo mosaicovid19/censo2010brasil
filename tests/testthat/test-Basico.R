@@ -15,28 +15,24 @@ test_that("class", {
   expect_s3_class(Basico, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(Basico),
-    c(NA, 33L)
-  )
-})
-
-test_that("nrow", {
-  expect_identical(
-    Basico %>%
-      count() %>%
-      pull(),
-    310120L
-  )
-})
-
-test_that("names", {
+test_that("ncol", {
   expect_equal(
     Basico %>%
       ncol(),
     33
   )
+})
+
+test_that("nrow", {
+  expect_equal(
+    Basico %>%
+      count() %>%
+      pull(),
+    310120
+  )
+})
+
+test_that("names", {
   expect_equal(
     Basico %>%
       select(starts_with("Cod_")) %>%
