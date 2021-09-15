@@ -12,7 +12,7 @@ Entorno05 <- abrir_base(base = "Entorno05", censo_dir = censo_dir, cores = cores
 dbWriteTable(censodb, "Entorno05", Entorno05, overwrite = TRUE)
 
 # template de doc (Rd)
-sinew::makeOxygen(Entorno05, add_fields = "source")
+cat(paste0(sinew::makeOxygen(Entorno05, add_fields = "source"), "\n"), file = "R/Entorno05.R")
 
 # Salvar apenas a estrutura do data.frame
 Entorno05 <- Entorno05 %>% head(0)

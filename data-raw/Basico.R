@@ -11,7 +11,7 @@ Basico <- abrir_base(base = "Basico", censo_dir = censo_dir, cores = cores)
 dbWriteTable(censodb, "Basico", Basico, overwrite = TRUE)
 
 # template de doc (Rd)
-sinew::makeOxygen(Basico, add_fields = "source")
+cat(paste0(sinew::makeOxygen(Basico, add_fields = "source"), "\n"), file = "R/Basico.R")
 
 # Salvar apenas a estrutura do data.frame
 Basico <- Basico %>% head(0)

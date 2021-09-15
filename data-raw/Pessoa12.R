@@ -12,7 +12,7 @@ Pessoa12 <- abrir_base(base = "Pessoa12", censo_dir = censo_dir, cores = cores) 
 dbWriteTable(censodb, "Pessoa12", Pessoa12, overwrite = TRUE)
 
 # template de doc (Rd)
-sinew::makeOxygen(Pessoa12, add_fields = "source")
+cat(paste0(sinew::makeOxygen(Pessoa12, add_fields = "source"), "\n"), file = "R/Pessoa12.R")
 
 # Salvar apenas a estrutura do data.frame
 Pessoa12 <- Pessoa12 %>% head(0)
