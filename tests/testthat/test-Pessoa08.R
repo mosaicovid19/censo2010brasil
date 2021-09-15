@@ -15,45 +15,46 @@ test_that("class", {
   expect_s3_class(Pessoa08, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(Pessoa08),
-    c(NA, 256L)
+test_that("ncol", {
+  expect_equal(
+    Pessoa08 %>%
+      ncol(),
+    255
   )
 })
 
 test_that("nrow", {
-  expect_identical(
+  expect_equal(
     Pessoa08 %>%
       count() %>%
       pull(),
-    310120L
+    310120
   )
 })
 
 test_that("names", {
   expect_equal(
     Pessoa08 %>%
-      colnames() %>%
-      length(),
-    256
-  )
-  expect_equal(
-    Pessoa08 %>%
       select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
+      ncol(),
     1
   )
   expect_equal(
     Pessoa08 %>%
+      select(matches("Situacao_setor")) %>%
+      ncol(),
+    0
+  )
+  expect_equal(
+    Pessoa08 %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
   expect_equal(
     Pessoa08 %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     254
   )
 })
@@ -64,20 +65,14 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
-  expect_type(
-    Pessoa08 %>%
-      select(Situacao_setor) %>%
-      head() %>%
-      pull(),
-    "double")
+    "character")
 })
 
 test_that("unknown vars", {
   expect_equal(
     Pessoa08 %>%
-      select(-starts_with("V"), -Cod_setor, -Situacao_setor) %>%
-      colnames() %>% length(),
+      select(-starts_with("V"), -Cod_setor) %>%
+      ncol(),
     0
   )
 })

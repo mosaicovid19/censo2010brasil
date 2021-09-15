@@ -15,45 +15,46 @@ test_that("class", {
   expect_s3_class(Entorno01, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(Entorno01),
-    c(NA, 222L)
+test_that("ncol", {
+  expect_equal(
+    Entorno01 %>%
+      ncol(),
+    202
   )
 })
 
 test_that("nrow", {
-  expect_identical(
+  expect_equal(
     Entorno01 %>%
       count() %>%
       pull(),
-    310120L
+    310120
   )
 })
 
 test_that("names", {
   expect_equal(
     Entorno01 %>%
-      colnames() %>%
-      length(),
-    222
+      select(starts_with("Cod_")) %>%
+      ncol(),
+    1
   )
   expect_equal(
     Entorno01 %>%
-      select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
-    10
+      select(matches("Situacao_setor")) %>%
+      ncol(),
+    0
   )
   expect_equal(
     Entorno01 %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
-    9
+      ncol(),
+    0
   )
   expect_equal(
     Entorno01 %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     201
   )
 })
@@ -64,21 +65,15 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
-  expect_type(
-    Entorno01 %>%
-      select(Situacao_setor) %>%
-      head() %>%
-      pull(),
-    "double")
+    "character")
 })
 
 test_that("unknown vars", {
   expect_equal(
     Entorno01 %>%
-      select(-starts_with("V"), -Cod_setor, -Situacao_setor) %>%
-      colnames() %>% length(),
-    19 # Setor_Precoleta + junk
+      select(-starts_with("V"), -Cod_setor) %>%
+      ncol(),
+    0
   )
 })
 

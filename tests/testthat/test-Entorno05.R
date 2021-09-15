@@ -15,45 +15,46 @@ test_that("class", {
   expect_s3_class(Entorno05, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(Entorno05),
-    c(NA, 256L)
+test_that("ncol", {
+  expect_equal(
+    Entorno05 %>%
+      ncol(),
+    221
   )
 })
 
 test_that("nrow", {
-  expect_identical(
+  expect_equal(
     Entorno05 %>%
       count() %>%
       pull(),
-    310114L # menos setores
+    310114 # menos setores
   )
 })
 
 test_that("names", {
   expect_equal(
     Entorno05 %>%
-      colnames() %>%
-      length(),
-    256
+      select(starts_with("Cod_")) %>%
+      ncol(),
+    1
   )
   expect_equal(
     Entorno05 %>%
-      select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
-    10
+      select(matches("Situacao_setor")) %>%
+      ncol(),
+    0
   )
   expect_equal(
     Entorno05 %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
-    9
+      ncol(),
+    0
   )
   expect_equal(
     Entorno05 %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     220
   )
 })
@@ -64,13 +65,16 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
-  expect_type(
+    "character")
+})
+
+test_that("unknown vars", {
+  expect_equal(
     Entorno05 %>%
-      select(Situacao_setor) %>%
-      head() %>%
-      pull(),
-    "double")
+      select(-starts_with("V"), -Cod_setor) %>%
+      ncol(),
+    0
+  )
 })
 
 test_that("unknown vars", {

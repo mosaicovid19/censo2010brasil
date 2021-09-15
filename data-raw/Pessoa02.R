@@ -5,14 +5,15 @@ if(!exists("censo_dir")) censo_dir <- file.path(paste0(Sys.getenv("HOME"), "/Dow
 
 if(!exists("cores")) cores <- 1
 
-Pessoa02 <- abrir_base(base = "Pessoa02", cores = cores)
+Pessoa02 <- abrir_base(base = "Pessoa02", censo_dir = censo_dir, cores = cores) %>%
+  select(Cod_setor, starts_with("V"))
 
 # Injetar data.frame em tabela do DB
-dbWriteTable(con, "Pessoa02", Pessoa02)
+dbWriteTable(censodb, "Pessoa02", Pessoa02)
+
+# template de doc (Rd)
+sinew::makeOxygen(Pessoa02, add_fields = "source")
 
 # Salvar apenas a estrutura do data.frame
 Pessoa02 <- Pessoa02 %>% head(0)
 usethis::use_data(Pessoa02, overwrite = TRUE)
-
-# template de doc (Rd)
-sinew::makeOxygen(Pessoa02, add_fields = "source")

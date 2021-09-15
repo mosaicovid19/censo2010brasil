@@ -15,45 +15,46 @@ test_that("class", {
   expect_s3_class(DomicilioRenda, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(DomicilioRenda),
-    c(NA, 16L)
+test_that("ncol", {
+  expect_equal(
+    DomicilioRenda %>%
+      ncol(),
+    15
   )
 })
 
 test_that("nrow", {
-  expect_identical(
+  expect_equal(
     DomicilioRenda %>%
       count() %>%
       pull(),
-    310120L
+    310120
   )
 })
 
 test_that("names", {
   expect_equal(
     DomicilioRenda %>%
-      colnames() %>%
-      length(),
-    16
-  )
-  expect_equal(
-    DomicilioRenda %>%
       select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
+      ncol(),
     1
   )
   expect_equal(
     DomicilioRenda %>%
+      select(matches("Situacao_setor")) %>%
+      ncol(),
+    0
+  )
+  expect_equal(
+    DomicilioRenda %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
+      ncol(),
     0
   )
   expect_equal(
     DomicilioRenda %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     14
   )
 })
@@ -64,13 +65,16 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
-  expect_type(
+    "character")
+})
+
+test_that("unknown vars", {
+  expect_equal(
     DomicilioRenda %>%
-      select(Situacao_setor) %>%
-      head() %>%
-      pull(),
-    "double")
+      select(-starts_with("V"), -Cod_setor) %>%
+      ncol(),
+    0
+  )
 })
 
 test_that("unknown vars", {

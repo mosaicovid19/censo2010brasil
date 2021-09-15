@@ -1,6 +1,7 @@
 library(censo2010brasil)
 library(DBI)
-con <- dbConnect(odbc::odbc(), driver = "SQLite3", database = file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite"))
+dbfile <- file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite")
+censodb <- dbConnect(odbc::odbc(), driver = "SQLite3", database = dbfile)
 
-dbDisconnect(con)
+dbDisconnect(censodb)
 detach("package:censo2010brasil", unload = TRUE)

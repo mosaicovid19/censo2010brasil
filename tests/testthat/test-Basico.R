@@ -15,45 +15,46 @@ test_that("class", {
   expect_s3_class(Basico, "tbl")
 })
 
-test_that("dimensions", {
-  expect_identical(
-    dim(Basico),
-    c(NA, 33L)
+test_that("ncol", {
+  expect_equal(
+    Basico %>%
+      ncol(),
+    33
   )
 })
 
 test_that("nrow", {
-  expect_identical(
+  expect_equal(
     Basico %>%
       count() %>%
       pull(),
-    310120L
+    310120
   )
 })
 
 test_that("names", {
   expect_equal(
     Basico %>%
-      colnames() %>%
-      length(),
-    33
-  )
-  expect_equal(
-    Basico %>%
       select(starts_with("Cod_")) %>%
-      colnames() %>% length(),
+      ncol(),
     10
   )
   expect_equal(
     Basico %>%
+      select(matches("Situacao_setor")) %>%
+      ncol(),
+    1
+  )
+  expect_equal(
+    Basico %>%
       select(starts_with("Nome_")) %>%
-      colnames() %>% length(),
+      ncol(),
     9
   )
   expect_equal(
     Basico %>%
       select(starts_with("V")) %>%
-      colnames() %>% length(),
+      ncol(),
     12
   )
 })
@@ -64,13 +65,22 @@ test_that("keys types", {
       select(Cod_setor) %>%
       head() %>%
       pull(),
-    "double")
+    "character")
   expect_type(
     Basico %>%
       select(Situacao_setor) %>%
       head() %>%
       pull(),
-    "double")
+    "integer")
+})
+
+test_that("unknown vars", {
+  expect_equal(
+    Basico %>%
+      select(-starts_with(c("Cod_", "Nome_", "V")), -Situacao_setor, -Tipo_setor) %>%
+      ncol(),
+    0
+  )
 })
 
 test_that("unknown vars", {
