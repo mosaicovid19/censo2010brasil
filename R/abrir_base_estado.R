@@ -28,7 +28,7 @@ abrir_base_estado <- function(base, estado, censo_dir = "~/Downloads/Censo2010/"
     # toma os 2 primeiros dígitos de um número de 4 dígitos
     mutate( across(any_of("Cod_UF"), ~ Cod_meso %/% 100) ) %>%
     # Todos os códigos como char
-    mutate( across(starts_with("Cod_"), as.character) ) %>%
+    mutate( across(starts_with(c("Cod_", "Situacao_setor")), as.character) ) %>%
     # fix Responsavel02_SP2
     mutate(across(starts_with("V"), as.numeric))
 }

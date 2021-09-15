@@ -21,7 +21,7 @@
 #'   \item{\code{Nome_do_subdistrito}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Cod_bairro}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{Situacao_setor}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Tipo_setor}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V001}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V002}}{double COLUMN_DESCRIPTION}
