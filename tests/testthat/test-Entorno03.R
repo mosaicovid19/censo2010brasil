@@ -77,13 +77,4 @@ test_that("unknown vars", {
   )
 })
 
-test_that("unknown vars", {
-  expect_equal(
-    Entorno03 %>%
-      select(-starts_with("V"), -Cod_setor, -Situacao_setor) %>%
-      colnames() %>% length(),
-    19 # Setor_Precoleta + junk
-  )
-})
-
 dbDisconnect(censodb)

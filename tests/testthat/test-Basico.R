@@ -83,13 +83,4 @@ test_that("unknown vars", {
   )
 })
 
-test_that("unknown vars", {
-  expect_equal(
-    Basico %>%
-      select(-starts_with(c("Cod_", "Nome_", "V")), -Situacao_setor, -Tipo_setor) %>%
-      colnames() %>% length(),
-    0
-  )
-})
-
 dbDisconnect(censodb)
