@@ -2,26 +2,26 @@
 #' @description DATASET_DESCRIPTION
 #' @format A data frame with 310120 rows and 33 variables:
 #' \describe{
-#'   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_Grandes Regiões}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_setor}}{character COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_Grandes Regiões}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_Grande_Regiao}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_UF}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_UF}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_da_UF}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_meso}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_meso}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_da_meso}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_micro}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_micro}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_da_micro}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_RM}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_RM}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_da_RM}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_municipio}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_municipio}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_municipio}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_distrito}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_distrito}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_distrito}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_subdistrito}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_subdistrito}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_subdistrito}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Cod_bairro}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_bairro}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
-#'   \item{\code{Situacao_setor}}{integer COLUMN_DESCRIPTION}
+#'   \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{Tipo_setor}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V001}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V002}}{double COLUMN_DESCRIPTION}
