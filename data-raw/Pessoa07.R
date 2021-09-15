@@ -9,7 +9,7 @@ Pessoa07 <- abrir_base(base = "Pessoa07", censo_dir = censo_dir, cores = cores) 
   select(Cod_setor, starts_with("V"))
 
 # Injetar data.frame em tabela do DB
-dbWriteTable(censodb, "Pessoa07", Pessoa07)
+dbWriteTable(censodb, "Pessoa07", Pessoa07, overwrite = TRUE)
 
 # template de doc (Rd)
 sinew::makeOxygen(Pessoa07, add_fields = "source")
