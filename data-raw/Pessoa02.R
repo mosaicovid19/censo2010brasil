@@ -11,9 +11,9 @@ Pessoa02 <- abrir_base(base = "Pessoa02", censo_dir = censo_dir, cores = cores) 
 # Injetar data.frame em tabela do DB
 dbWriteTable(censodb, "Pessoa02", Pessoa02)
 
+# template de doc (Rd)
+sinew::makeOxygen(Pessoa02, add_fields = "source")
+
 # Salvar apenas a estrutura do data.frame
 Pessoa02 <- Pessoa02 %>% head(0)
 usethis::use_data(Pessoa02, overwrite = TRUE)
-
-# template de doc (Rd)
-sinew::makeOxygen(Pessoa02, add_fields = "source")
