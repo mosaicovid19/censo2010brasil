@@ -3,9 +3,9 @@ library(DBI)
 dbfile <- file.path(Sys.getenv("HOME"), "Downloads/Censo2010", "censo2010brasil.sqlite")
 
 test_that("db file integrity", {
-  expect_equal(file.size(dbfile), 2235023360)
-  skip("skip MD5SUM (too much time)")
-  expect_equal(tools::md5sum(dbfile), "b80e73d8a7d066fdecc545b35d9f0dfc", ignore_attr = TRUE)
+  expect_equal(file.size(dbfile), 2243100672)
+  # skip("skip MD5SUM (too much time)")
+  expect_equal(tools::md5sum(dbfile), "8d6d2262ef769a23c5b7db414ba0191d", ignore_attr = TRUE)
 })
 
 ## Connect to db
