@@ -134,7 +134,7 @@
 #'   \item{\code{V129}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V130}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V131}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V132}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V132}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "PessoaRenda"

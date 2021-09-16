@@ -242,7 +242,7 @@
 #'   \item{\code{V237}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V238}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V239}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V240}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V240}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa09"

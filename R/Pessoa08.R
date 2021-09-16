@@ -256,7 +256,7 @@
 #'   \item{\code{V251}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V252}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V253}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V254}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V254}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa08"

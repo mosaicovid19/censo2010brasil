@@ -222,7 +222,7 @@
 #'   \item{\code{V839}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V840}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V841}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V842}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V842}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Entorno04"

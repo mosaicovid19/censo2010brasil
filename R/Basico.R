@@ -34,7 +34,7 @@
 #'   \item{\code{V009}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V010}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V011}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V012}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V012}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Basico"

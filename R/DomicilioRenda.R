@@ -16,7 +16,7 @@
 #'   \item{\code{V011}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V012}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V013}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V014}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V014}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "DomicilioRenda"

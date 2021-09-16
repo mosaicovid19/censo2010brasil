@@ -203,7 +203,7 @@
 #'   \item{\code{V619}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V620}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V621}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V622}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V622}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Entorno03"

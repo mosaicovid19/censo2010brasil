@@ -218,7 +218,7 @@
 #'   \item{\code{V213}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V214}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V215}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V216}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V216}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Responsavel02"

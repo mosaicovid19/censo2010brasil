@@ -157,7 +157,7 @@
 #'   \item{\code{V152}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V153}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V154}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V155}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V155}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa04"

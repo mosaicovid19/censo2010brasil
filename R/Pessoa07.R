@@ -206,7 +206,7 @@
 #'   \item{\code{V201}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V202}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V203}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V204}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V204}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa07"

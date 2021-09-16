@@ -87,7 +87,7 @@
 #'   \item{\code{V082}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V083}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V084}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V085}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V085}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa01"

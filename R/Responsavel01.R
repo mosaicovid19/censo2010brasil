@@ -110,7 +110,7 @@
 #'   \item{\code{V105}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V106}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V107}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V108}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V108}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Responsavel01"

@@ -12,7 +12,7 @@
 #'   \item{\code{V007}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V008}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V009}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V010}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V010}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa05"
