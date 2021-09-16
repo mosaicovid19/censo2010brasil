@@ -5,10 +5,9 @@
 \alias{Pessoa02}
 \title{DATASET_TITLE}
 \format{
-A data frame with 0 rows and 172 variables:
+A data frame with 310120 rows and 171 variables:
 \describe{
   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
-  \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
   \item{\code{V086}}{double COLUMN_DESCRIPTION}
   \item{\code{V087}}{double COLUMN_DESCRIPTION}
   \item{\code{V088}}{double COLUMN_DESCRIPTION}

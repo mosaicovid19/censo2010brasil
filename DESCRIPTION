@@ -17,7 +17,6 @@ Imports:
     dbplyr,
     DBI,
     odbc,
-    bit64,
     foreach,
     readxl
 RoxygenNote: 7.1.1

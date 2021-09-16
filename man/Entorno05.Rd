@@ -5,10 +5,9 @@
 \alias{Entorno05}
 \title{DATASET_TITLE}
 \format{
-A data frame with 0 rows and 256 variables:
+A data frame with 310114 rows and 221 variables:
 \describe{
   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
-  \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
   \item{\code{V843}}{double COLUMN_DESCRIPTION}
   \item{\code{V844}}{double COLUMN_DESCRIPTION}
   \item{\code{V845}}{double COLUMN_DESCRIPTION}
@@ -229,40 +228,6 @@ A data frame with 0 rows and 256 variables:
   \item{\code{V1060}}{double COLUMN_DESCRIPTION}
   \item{\code{V1061}}{double COLUMN_DESCRIPTION}
   \item{\code{V1062}}{double COLUMN_DESCRIPTION}
-  \item{\code{Setor_Precoleta}}{double COLUMN_DESCRIPTION}
-  \item{\code{Cod_Grandes Regiões}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_Grande_Regiao}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_UF}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_UF}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_meso}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_meso}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_micro}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_micro}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_RM}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_RM}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_municipio}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_municipio}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_distrito}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_distrito}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_subdistrito}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_subdistrito}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_bairro}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
-  \item{\code{...242}}{double COLUMN_DESCRIPTION}
-  \item{\code{...243}}{double COLUMN_DESCRIPTION}
-  \item{\code{...244}}{double COLUMN_DESCRIPTION}
-  \item{\code{...245}}{double COLUMN_DESCRIPTION}
-  \item{\code{...246}}{double COLUMN_DESCRIPTION}
-  \item{\code{...247}}{double COLUMN_DESCRIPTION}
-  \item{\code{...248}}{double COLUMN_DESCRIPTION}
-  \item{\code{...249}}{double COLUMN_DESCRIPTION}
-  \item{\code{...250}}{double COLUMN_DESCRIPTION}
-  \item{\code{...251}}{double COLUMN_DESCRIPTION}
-  \item{\code{...252}}{double COLUMN_DESCRIPTION}
-  \item{\code{...253}}{double COLUMN_DESCRIPTION}
-  \item{\code{...254}}{double COLUMN_DESCRIPTION}
-  \item{\code{...255}}{double COLUMN_DESCRIPTION}
-  \item{\code{...256}}{double COLUMN_DESCRIPTION}
 }
 }
 \source{

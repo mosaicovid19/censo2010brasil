@@ -2,7 +2,7 @@
 #' @description DATASET_DESCRIPTION
 #' @format A data frame with 310099 rows and 156 variables:
 #' \describe{
-#'   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_setor}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{V001}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V002}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V003}}{double COLUMN_DESCRIPTION}
@@ -157,7 +157,7 @@
 #'   \item{\code{V152}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V153}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V154}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V155}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V155}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa04"

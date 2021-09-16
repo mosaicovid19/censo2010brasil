@@ -1,9 +1,8 @@
 #' @title DATASET_TITLE
 #' @description DATASET_DESCRIPTION
-#' @format A data frame with 0 rows and 172 variables:
+#' @format A data frame with 310120 rows and 171 variables:
 #' \describe{
-#'   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_setor}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{V086}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V087}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V088}}{double COLUMN_DESCRIPTION}
@@ -173,7 +172,7 @@
 #'   \item{\code{V252}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V253}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V254}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V255}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V255}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Pessoa02"

@@ -5,10 +5,9 @@
 \alias{Entorno04}
 \title{DATASET_TITLE}
 \format{
-A data frame with 0 rows and 241 variables:
+A data frame with 310120 rows and 221 variables:
 \describe{
   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
-  \item{\code{Situacao_setor}}{double COLUMN_DESCRIPTION}
   \item{\code{V623}}{double COLUMN_DESCRIPTION}
   \item{\code{V624}}{double COLUMN_DESCRIPTION}
   \item{\code{V625}}{double COLUMN_DESCRIPTION}
@@ -229,25 +228,6 @@ A data frame with 0 rows and 241 variables:
   \item{\code{V840}}{double COLUMN_DESCRIPTION}
   \item{\code{V841}}{double COLUMN_DESCRIPTION}
   \item{\code{V842}}{double COLUMN_DESCRIPTION}
-  \item{\code{Setor_Precoleta}}{double COLUMN_DESCRIPTION}
-  \item{\code{Cod_Grandes Regiões}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_Grande_Regiao}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_UF}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_UF}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_meso}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_meso}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_micro}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_micro}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_RM}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_da_RM}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_municipio}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_municipio}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_distrito}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_distrito}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_subdistrito}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_subdistrito}}{character COLUMN_DESCRIPTION}
-  \item{\code{Cod_bairro}}{double COLUMN_DESCRIPTION}
-  \item{\code{Nome_do_bairro}}{character COLUMN_DESCRIPTION}
 }
 }
 \source{

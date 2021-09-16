@@ -71,7 +71,7 @@ test_that("keys types", {
       select(Situacao_setor) %>%
       head() %>%
       pull(),
-    "integer")
+    "character")
 })
 
 test_that("unknown vars", {

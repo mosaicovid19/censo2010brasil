@@ -9,10 +9,10 @@ Pessoa11 <- abrir_base(base = "Pessoa11", censo_dir = censo_dir, cores = cores) 
   select(Cod_setor, starts_with("V"))
 
 # Injetar data.frame em tabela do DB
-dbWriteTable(censodb, "Pessoa11", Pessoa11)
+dbWriteTable(censodb, "Pessoa11", Pessoa11, overwrite = TRUE)
 
 # template de doc (Rd)
-sinew::makeOxygen(Pessoa11, add_fields = "source")
+cat(paste0(sinew::makeOxygen(Pessoa11, add_fields = "source"), "\n"), file = "R/Pessoa11.R")
 
 # Salvar apenas a estrutura do data.frame
 Pessoa11 <- Pessoa11 %>% head(0)

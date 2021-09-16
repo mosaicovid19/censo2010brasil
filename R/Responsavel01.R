@@ -2,7 +2,7 @@
 #' @description DATASET_DESCRIPTION
 #' @format A data frame with 310114 rows and 109 variables:
 #' \describe{
-#'   \item{\code{Cod_setor}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{Cod_setor}}{character COLUMN_DESCRIPTION}
 #'   \item{\code{V001}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V002}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V003}}{double COLUMN_DESCRIPTION}
@@ -110,7 +110,7 @@
 #'   \item{\code{V105}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V106}}{double COLUMN_DESCRIPTION}
 #'   \item{\code{V107}}{double COLUMN_DESCRIPTION}
-#'   \item{\code{V108}}{double COLUMN_DESCRIPTION}
+#'   \item{\code{V108}}{double COLUMN_DESCRIPTION} 
 #'}
 #' @source \url{http://somewhere.important.com/}
 "Responsavel01"
